@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+
+
+body{
+    background: darkgreen ;
+    color: white;
+    background-image: linear-gradient(red,gold,green);
+    background-repeat: no-repeat;
+    font-family: 'Permanent Marker', cursive;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+.calc{
+    
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 50%;
+    height: 300px;
+   
+    
+}
