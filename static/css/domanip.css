@@ -1,0 +1,8 @@
+#flexbox{
+    gap: 10px;
+    flex-wrap: wrap;
+   
+}
+.card{
+    width: 300px; 
+}
