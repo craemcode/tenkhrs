@@ -1,42 +1,8 @@
-body{
-    /* background: url("https://media.istockphoto.com/vectors/african-style-seamless-pattern-bright-ethnic-and-tribal-floral-wax-vector-id1175946282"); */
-    /* background-size: 200px 200px; */
-    text-align: justify;
+#flexbox{
+    gap: 10px;
+    flex-wrap: wrap;
+   
 }
-
-.article{
-    background: linear-gradient(to bottom right, rgb(53, 232, 214), rgba(53, 232, 214,0));
-    width: 61.8%;
-    padding: 2%;
-    margin:1px;
-
-}
-.art-img{
-    height:300px;
-    width: 60%;
-    border: 2px solid ;
-    padding: 40px;
-}
-
-#title{
-    color: rgb(45, 105, 61) ;
-}
-.subtitle{
-    color:rgb(135, 89, 158);
-    text-align: center;
-}
-
-#converter{
-    float: right;
-    width: 32.1%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10px 10px 10px;
-    align-items: center;
-    justify-content: center;
-    
-}
-.para-text{
-    width: 80%;
+.card{
+    width: 300px; 
 }
