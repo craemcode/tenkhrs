@@ -1,170 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="domanip.js" defer></script>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="static/css/domanip.css" />
-    <title>Ganja Cave</title>
-
-</head>
-
-<body>
+{% extends 'base.html' %}
 
 
 
-    <h1 id="title"> The Ganja Cave</h1>
-
-    <article class="article" id="converter">
-        <h2 class="subtitle">Weed Converter</h2>
-        <label class="conv-container" for="grams">Grams</label>
-        <input class="conv-container" type="number" id='grams'>
-        <label class="conv-container" for="grams">Ounces</label>
-        <input class="conv-container" type="number" id='ounces'>
-
-    </article>
+{% block page_content %}
 
 
 
-    <div class="d-flex p-2" id="flexbox">
-        <article class="card shadow p-3 mb-5 bg-body rounded">
 
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
 
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
+<h1 id="title"> The Ganja Cave</h1>
 
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
+<article class="container-sm" id="converter">
+    <h2 class="subtitle">Weed Converter</h2>
+    <label class="conv-container" for="grams">Grams</label>
+    <input class="conv-container" type="number" id='grams'>
+    <label class="conv-container" for="grams">Ounces</label>
+    <input class="conv-container" type="number" id='ounces'>
 
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
+</article>
 
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
-
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
-
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
-
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
-
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
-
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
-
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
-
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
-        <article class="card shadow p-3 mb-5 bg-body rounded">
-
-            <img class="card-img-top" src="static//images/ganja.jpg" alt="">
-            <div class="card-body">
-
-                <h5 class="card-title">History of Ganja</h2>
-                    <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                        of Letraset sheets containing Lorem Ipsum passages, and more
-                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                        Ipsum.
-                    </p>
-                    <button class="btn btn-primary"> Click me!</button>
-            </div>
-        </article>
+<form action="/login" id="login" method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
-</body>
+ <a class= "btn btn-primary" href="addprod.html">Add Product</a>
 
-</html>
+
+ 
+    {% endblock %}
