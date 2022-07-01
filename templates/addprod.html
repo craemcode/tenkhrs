@@ -3,43 +3,24 @@
 {% block page_content %}
 
 <form action="/login" id="login" method="post">
-    <label for="exampleInputEmail1" class="form-label">Product Name</label>
-    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"
-        aria-label=".form-control-lg example">
-    <label for="exampleDataList" class="form-label">Category</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-    <datalist id="datalistOptions">
-        <option value="Smokables">
-        <option value="Edibles">
-        <option value="Oils">
-    </datalist>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-      <div>
-        <label for="formFileLg" class="form-label">Picture</label>
-        <input class="form-control form-control-lg" id="formFileLg" type="file">
-      </div>
-      <label for="exampleInputEmail1" class="form-label">Units:</label>
-      <input class="form-control form-control-lg" type="number" placeholder=".form-control-lg"
-        aria-label=".form-control-lg example">
-      <label for="exampleInputEmail1" class="form-label">Price Per Unit</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">Ksh</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        <span class="input-group-text">.00</span>
-      </div>
-      
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-          In stock?
-        </label>
-      </div>
 
-      <button type="submit" class="btn btn-primary">Add Product</button>
-
+  {{prod_form.name.label}}
+  {{prod_form.name( class="form-control form-control-lg")}}
+  {{prod_form.category.label}}
+  {{prod_form.category(class="form-control")}}
+  {{prod_form.desc.label}}
+  {{prod_form.desc(class="form-control")}}
+  {{prod_form.pic.label}}
+  {{prod_form.pic(class="form-control form-control-lg")}}
+  {{prod_form.units.label}}
+  {{prod_form.units(class="form-control form-control-lg")}}
+  {{prod_form.price.label}}
+  <div class="input-group mb-3">
+    <span class="input-group-text">Ksh</span>
+    {{prod_form.price(class="form-control")}}
+    <span class="input-group-text">.00</span>
+  </div>
+  {{prod_form.submit(class="btn btn-primary")}}
 </form>
 
 
