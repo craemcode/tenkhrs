@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+<form action="/login" id="login" method="post">
+
+  {{prod_form.name.label}}
+  {{prod_form.name( class="form-control form-control-lg")}}
+  {{prod_form.category.label}}
+  {{prod_form.category(class="form-control")}}
+  {{prod_form.desc.label}}
+  {{prod_form.desc(class="form-control")}}
+  {{prod_form.pic.label}}
+  {{prod_form.pic(class="form-control form-control-lg")}}
+  {{prod_form.units.label}}
+  {{prod_form.units(class="form-control form-control-lg")}}
+  {{prod_form.price.label}}
+  <div class="input-group mb-3">
+    <span class="input-group-text">Ksh</span>
+    {{prod_form.price(class="form-control")}}
+    <span class="input-group-text">.00</span>
+  </div>
+  {{prod_form.submit(class="btn btn-primary")}}
+</form>
+
+
+
+
+
+{% endblock %}
