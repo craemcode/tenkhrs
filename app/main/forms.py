@@ -3,10 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FileField, IntegerField, TextAreaField, PasswordField, SelectField
 from wtforms.validators import DataRequired
 
-class PlugForm(FlaskForm):
-    name = StringField("Your Username")
-    password = PasswordField('password')
-    submit = SubmitField(validators=[DataRequired()])
+
 
 class ProductForm(FlaskForm):
      name = StringField("Product Name")
