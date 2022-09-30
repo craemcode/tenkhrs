@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block page_content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times</button>
+        {{ message }}
+    </div>
+     {% endfor %}
+</div>
+
+
+<h1>Register</h1>
+
+
+<form action="/register" id="register" method="post">
+    <div class="mb-3">
+      {{registration_form.hidden_tag()}}
+      {{registration_form.username.label}}
+      {{registration_form.username(class="form-control form-control-lg")}}
+      {{registration_form.password.label}}
+      {{registration_form.password(class="form-control")}}
+      {{registration_form.password2.label}}
+      {{registration_form.password2(class="form-control")}}
+      {{registration_form.submit(class="btn btn-primary")}}
+      </div>
+  </form>
+
+{% endblock %}
