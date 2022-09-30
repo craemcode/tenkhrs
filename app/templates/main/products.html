@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+<h2>Main Market</h2>
+<div class="d-flex p-2">
+
+ {% for product in products %}
+
+     <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.desc}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Plug: {{product.plug_name}}</li>
+        <li class="list-group-item">Price: {{product.price}}</li>
+        <li class="list-group-item">category: {{product.category}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Conctact Plug</a>
+        <a href="#" class="card-link">Contact Plug Through us</a>
+      </div>
+    </div>
+{% endfor %}
+
+</div>
+ <a class= "btn btn-primary" href="{{url_for('.add_product')}}">Add Product</a>
+
+
+{% endblock %}

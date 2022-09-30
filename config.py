@@ -21,8 +21,9 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    DEBUG = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///diary.db'
+
 
 
 class TestingConfig(Config):
