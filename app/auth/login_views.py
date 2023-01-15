@@ -1,22 +1,29 @@
 from . import auth
 from flask import render_template, request, url_for, redirect, flash
-from .forms import PlugForm, RegForm
-from ..models import Plug
+from .forms import LoginForm, RegForm
+from ..models import User
 from flask_login import login_user, logout_user, login_required
 from .. import db
 
 
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
-    login_form = PlugForm()
+    login_form = LoginForm()
     if login_form.validate_on_submit():
-        user = Plug.query.filter_by(user_name=login_form.name.data).first()
+        user = User.query.filter_by(user_name=login_form.name.data).first()
 
-        if user is not None and user.verify_password(login_form.password.data):
+        if user.permission == 1 and user is not None and user.verify_password(login_form.password.data):
             login_user(user, remember=False)
             next = request.args.get('next')
             if next is None or not next.startswith('/'):
                 next = url_for('main.products')
+            return redirect(next)
+
+        elif user.permission == 25 and user is not None and user.verify_password(login_form.password.data):
+            login_user(user, remember=False)
+            next = request.args.get('next')
+            if next is None or not next.startswith('/'):
+                next = url_for('main.add_product')
             return redirect(next)
 
         flash('invalid username or password')
@@ -36,11 +43,19 @@ def register():
     registration_form = RegForm()
     if registration_form.validate_on_submit():
         usrname = '@'+registration_form.username.data
-        new_plug = Plug(user_name=usrname,
-                        password=registration_form.password.data,
-                        role_id=3)
+        if registration_form.permission.data == "Buyer":
+            permission = 1
+            new_user = User(user_name=usrname,
+                            password=registration_form.password.data,
+                            permission=permission)
+        elif registration_form.permission.data == "Seller":
+            permission = 25
+            new_user = User(user_name=usrname,
+                            password=registration_form.password.data,
+                            permission=permission)
 
-        db.session.add(new_plug)
+
+        db.session.add(new_user)
         try:
             db.session.commit()
             flash("User Successfully added")
