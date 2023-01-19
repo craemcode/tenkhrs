@@ -5,19 +5,20 @@ from . import main
 from .. import db
 from flask import render_template, url_for, flash, redirect, request
 from .forms import ProductForm
-from ..models import Plug, Product
+from ..models import User, Product, Permission
 from flask_login import login_required, current_user
+from ..decorators import permission_required
 
 
 @main.route('/', methods=['GET'])
 def index():
-    if current_user.is_authenticated:
-        return redirect(url_for('.products'))
+
     return render_template('main/index.html')
 
 
 @main.route('/add_product', methods=['GET', 'POST'])
 @login_required
+@permission_required(Permission.SELL)
 def add_product():
     prod_form = ProductForm()
     if prod_form.validate_on_submit():
@@ -32,7 +33,7 @@ def add_product():
         try:
             db.session.commit()
             flash("added to db")
-            return redirect(url_for('.products'))
+            return redirect(url_for('.add_product'))
         except Exception as e:
             print(f'Error: {e}')
 
@@ -41,6 +42,7 @@ def add_product():
 
 @main.route('/products', methods=['GET'])
 @login_required
+@permission_required(Permission.BUYER)
 def products():
     products = Product.query.all()
 
