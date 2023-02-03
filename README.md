@@ -1,8 +1,7 @@
 # tenkhrs
-10,000 hours of training. The city, its buildings, and the streets that connect them
+A market for advertising and viewing products
 
-Introducing flask and Vue Js
-Had a difficult time styling thought catcher. so let me try my own thing.
-Beginning Vue Js
-
-Wish me luck!
+Technologies used:
+  Flask
+  SQLite
+  Bootstrap css
